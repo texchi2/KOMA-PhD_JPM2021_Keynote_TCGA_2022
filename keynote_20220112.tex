@@ -71,7 +71,7 @@ parskip=half-, % Paragraphs separated by half a line
 %\usepackage{xcolor}
 
 %\usepackage{xr-hyper}
-%\usepackage{hyperref}
+\usepackage{hyperref} % for \url clickable
 %\newcommand{\R}[1]{\label{#1}\linelabel{#1}} % for \label page and line
 %\newcommand{\R}[1]{\linelabel{#1}} % for \label page and line
 %\newcommand{\lr}[1]{page~\pageref{#1} (line~\lineref{#1})} % for \ref page and line
@@ -450,7 +450,7 @@ parskip=half-, % Paragraphs separated by half a line
   {\bfseries\Large\mytitle\par}% Title
   \vspace{0.2cm}
   \normalsize
-  \myauthor, DDS, Ph.D.  \hspace{20mm} \par % Author name
+  \myauthor, D.D.S., Ph.D.  \hspace{20mm} \par % Author name
 %  Ph.D. candidate: \myauthor  \hspace{28.7mm} \par % Author name
   Advisors: \myadvisorM \hspace{1mm} \myadvisorJ\par \hspace{1mm} \myadvisorA\par
   \mydate %\par % Date
@@ -485,10 +485,13 @@ parskip=half-, % Paragraphs separated by half a line
 
 \textbf{KEYWORD}\\
 %head and neck squamous cell carcinoma (HNSCC);\\
-%the Cancer Genome Atlas (TCGA); \\
-\hl{transcriptomics};\hl{proteomics}; \\
+the Cancer Genome Atlas (TCGA); \\
+\hl{transcriptomics}; proteomics; \\
 \hl{RNA-Seq}: \acrlong{rnaseq};\\ %\hl{mass spectrometry};\\
-Cox's survival analysis; \hl{optimal cutoff} for Kaplan--Meier curve; \\
+R; Rstudio server on the cloud; Google platform; firebrowseR;\\
+survival analysis; \hl{optimal cutoff} for Kaplan--Meier curve; Cox proportional hazard regression model;\\
+\url{https://github.com/texchi2/pvalueTex}; \\
+reproducible research; \LaTeX;\\
 %effect size; hazard ratio in Cox's modeling;\\
 %\acrfull{tmsb4x}; \\
 %\acrfull{CALML5}; \\
@@ -501,10 +504,10 @@ Cox's survival analysis; \hl{optimal cutoff} for Kaplan--Meier curve; \\
 \2 using Next Generation Sequencing (NGS) to measure the gene expression (\hl{RNA-Seq})
 
 \1 to make a model to estimate biomarkers
-\2 association of RNA-Seq versus patient's survival %基因表現量，與口腔癌症病患存活的相關性
+\2 association of RNA-Seq versus patient's survival time %基因表現量，與口腔癌症病患存活的相關性
 
 \1 Chi et al, 2021, published at \url{https://www.mdpi.com/2075-4426/11/8/782/htm}
-\2 a brief summary
+\2 a video abstract available at
 \url{https://encyclopedia.pub/16116}
 
 \end{outline}
@@ -543,7 +546,7 @@ Cox's survival analysis; \hl{optimal cutoff} for Kaplan--Meier curve; \\
         \2 The age-standardized incidence rate of \acrshort{hnscc} in males is \hl{42.15} per 100,000 person-years~ (7,400 victims/year) ~\autocite{MOHWincidence2018}**;
 %        \2 Specialist of otolaryngology, oral and maxillofacial surgery in Taiwan (2021): 2,557 and 431, respectively  
         \2 The \hl{fourth} leading cause of cancer-related death for males in Taiwan (2,779 persons/year)~\autocite{MOHWdeath2017}**.
-        {\tiny (*MOHW: Ministry of Health and Welfare, Taiwan)}
+        {\tiny (**MOHW: Ministry of Health and Welfare, Taiwan)}
 \end{outline}
 \end{minipage}%\hspace{2mm}
 %\begin{wrapfigure}{r}{0.3\textwidth}
@@ -1407,12 +1410,12 @@ GUI: graphic user interface, by mouse and click}
 \begin{outline}
 
 % top-down
-\1 A transcriptomics research since 2017 in MH laboratory;
+\1 A transcriptomics research at MH laboratory (2017 to 2021);
 \1 Biomarkers according to gene expression level (RNA) versus prognosis;
 %    \2 spatial distribution on pathological slides, 
 %    \2 time distribution on cancer stage (e.g., I II III or IV).
 \1 KM plotter for TCGA: \hl{manual input} genes (100 x 200);
-\1 Designing a programmatic (20,000 or 30,000 genes) screening by \hl{sliding-window} method: Chi2021
+\1 Designing a programmatic (20,000 or 30,000 protein-coding genes) screening by \hl{sliding-window} method: Chi2021~\autocite{Chi2021}
 %\1 Deep learning and holistic cancer care in the future: Chi2022
 \end{outline}
 %%
@@ -1505,8 +1508,17 @@ GUI: graphic user interface, by mouse and click}
 
 \clearpage
 
+\subsection{Validation Cohort}
 
+Initial manuscript at preprint services: \url{https://www.researchsquare.com/article/rs-122012/new/v1}, and \url{https://www.preprints.org/manuscript/202107.0171/v1}
 
+\includegraphics[width=8cm]{fcaf149553b93b72bd044c41.jpg} {\tiny $[0.5<$Hazard ratio$<1.5]$}
+
+Reviewer's comment: "the validation rate is relatively low, and the usability of the biomarkers is questionable."\\
+
+We found GSE65858 dataset.
+
+\clearpage
 %%%
 \section{Results} % for (B)}
 
