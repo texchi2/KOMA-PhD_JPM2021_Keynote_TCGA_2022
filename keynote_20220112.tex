@@ -1406,6 +1406,24 @@ GUI: graphic user interface, by mouse and click}
 \clearpage
 %
 \section{Materials and Methods} %for (B) Transcriptomics} 
+
+\subsection{TCGA Database}
+What and Why TCGA?
+\begin{outline}
+\1 The Cancer Genome Atlas (TCGA) project (since 2005)
+\2 by U.S. National Cancer Institute’s (NCI) Center for Cancer Genomics
+\1 The genomics and clinic data from 84,392 patients among 33 major cancer types (data release 27.0—29 October 2020, available at \url{https://www.cancer.gov/about-nci/organization/ccg/research/structural-genomics/tcga/studied-cancers}
+\2 The 528 TCGA HNSCC patients’ clinical information and RNA-Seq data
+
+\clearpage
+
+\1 Broad genome data analysis center (GDAC) Firebrowse (firebrowse.org, version 1.1.35, 27 September 2016)
+
+\2 a Representational State Transfer (REST) application programmable interface (API)
+\2 an R package, FirebrowseR (available at \url{https://github.com/mariodeng/FirebrowseR}, accessed on 10 March 2021)
+\end{outline}
+
+\clearpage
 \subsection{Hypothesis} 
 \begin{outline}
 
@@ -1463,13 +1481,20 @@ GUI: graphic user interface, by mouse and click}
 % Description:1) FDR correction of Kaplan--Meier \protect\textit{P} values during Cutoff finding; and 2) Bonferroni correction of Kaplan--Meier \protect\textit{P} values after Cox modeling for candidate selection.
 \end{minipage}
 %\end{figure}
-\begin{figure}
-    \centering
-\includegraphics[height=10cm]{KM_cutoff.pdf}
-%    \caption{Caption}
-%    \label{fig:my_label}
-\end{figure}
+%\clearpage
 
+\begin{minipage}[c]{0.45\linewidth}
+A \hl{serial cut} at 30\%-70\% quantile for KM estimates
+\end{minipage}
+%\begin{figure}
+\begin{minipage}[c]{0.45\linewidth}
+\centering
+\includegraphics[width=7cm]{KM_cutoff.pdf}
+%    \caption*{
+ %}
+%    \label{fig:my_label}
+%\end{figure}
+\end{minipage}
 
 \clearpage
 %%%%%%%%%%%%%%%%%
@@ -1491,10 +1516,12 @@ GUI: graphic user interface, by mouse and click}
 \begin{outline}
 
 \1 sliding-window cutoff selection
-    \2 a \hl{serial cut} at 30\%-70\% for KM estimates
+
 %    \2 log-rank test 
+    \2  \hl{6284} genes in initial (3118 if median cutoff)
     \2 the lowest one in \textit{p}-value plot for each gene
-\2  \acrfull{fdr} ($ < 0.05$) correction {\tiny ~\autocite{Benjamini1995a}} to control the type I error of multiple test 
+\2  \acrfull{fdr} ($ < 0.05$) correction {\tiny ~\autocite{Benjamini1995a}} to control the type I error of multiple test
+\2 it became \hl{967} (if median cutoff 209)
 %\1 Bonferroni correction for candidate selection
 
 
@@ -1514,9 +1541,11 @@ Initial manuscript at preprint services: \url{https://www.researchsquare.com/art
 
 \includegraphics[width=8cm]{fcaf149553b93b72bd044c41.jpg} {\tiny $[0.5<$Hazard ratio$<1.5]$}
 
-Reviewer's comment: "the validation rate is relatively low, and the usability of the biomarkers is questionable."\\
+Reviewer's comment: "the validation rate is relatively low, and the usability of the biomarkers is questionable." (published \hl{Peer-Review Record}: \url{https://www.mdpi.com/2075-4426/11/8/782/review_report})\\
 
-We found GSE65858 dataset.
+\includegraphics[width=3cm]{peer_review.png}
+
+We found GSE65858 dataset (n = 270).
 
 \clearpage
 %%%
@@ -1843,11 +1872,12 @@ A high-quality HNSCC dataset (with protein-coding gene expression and survival d
 \thispagestyle{headings}
 \markright{Discussion \hfill Holistic cancer care \hfill}
 
-Holistic (whole) care: to care \hl{spirit}, \hl{emotion}, \hl{the body} of a person, and his \hl{social} relation.
+Holistic (whole) care: to care \underline{body}, \hl{emotion} of a person, and his/her \hl{social} relation. Moreover, we need to see their \hl{spirit} needs.
 
 It is the unknown piece of the puzzle in cancer care.\\
 %Deep learning and holistic cancer care in the future: Chi2022
 \includegraphics[width=4cm]{piece.jpg}
+\includegraphics[width=4cm]{holistic_全人.pdf}
 %%%%%%%%%%%%%%%%%%%%
 %%%%%% carcinogenesis
 
@@ -1957,7 +1987,7 @@ altering epigenetic control in gene regulation and mRNA/miRNA expression %of cel
 %    \2 Confidence/trust (i.e., \hl{TR}) might promote healing through a mind--brain--body connection manner
     
 
-\1 A grant proposal (machine learning algorithm---deep learning)
+\1 A grant proposal (machine learning algorithm---\hl{deep learning})
     \2 CAMK2N1 might involved in positive \textcolor{red}{surgical margin};
 %        \2 CAMK2N1 has moderate correlation with N+ (Pearson's r = 0.07) :-)
     \2 CAMK2N1 might predict \textcolor{red}{neck metastasis} in clinical N0 neck before surgery;
@@ -2049,7 +2079,7 @@ altering epigenetic control in gene regulation and mRNA/miRNA expression %of cel
 \begin{flushright}
   \vspace{1.6cm}
   \color{white}\sffamily
-  {\bfseries\Large Thanks Professors \\Comments and Suggestions\par}% Title
+  {\bfseries\Large Thank You \\Comments and Suggestions\par}% Title
   \vspace{0.5cm}
   \normalsize
 %  \myauthor\par % Author name
